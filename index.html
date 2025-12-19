@@ -89,9 +89,45 @@
 <div id="protected">
 
   <!-- Gradient Banner -->
-  <div class="gradient-banner">
-    <p style="font-family: Georgia, 'Times New Roman', Times, serif;  font-size: larger;  font-style: italic; font-weight: 600;">Every memory shines brighter together. ^_^ </p>
-  </div>
+ <div class="gradient-banner" style="text-align:center; padding:15px;">
+  <p style="font-family: Georgia, 'Times New Roman', Times, serif;  
+            font-size: large;  
+            font-style: italic;  
+            font-weight: 500; 
+            margin-bottom:10px;">
+    Every memory shines brighter together. ^_^ <!-- Small emoji-style buttons -->
+  <button id="playBtn" 
+          style="font-size:18px; padding:4px 8px; border:none; background:none; cursor:pointer;">
+    ▶
+  </button>
+  <button id="pauseBtn" 
+          style="font-size:18px; padding:4px 8px; border:none; background:none; cursor:pointer;">
+    ⏸
+  </button>
+  </p>
+
+  
+</div>
+
+<!-- Background audio -->
+<audio id="bg-music" loop>
+  <source src="song/Doosti.mp4" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+  const music = document.getElementById('bg-music');
+  const playBtn = document.getElementById('playBtn');
+  const pauseBtn = document.getElementById('pauseBtn');
+
+  playBtn.addEventListener('click', () => {
+    music.play();
+  });
+
+  pauseBtn.addEventListener('click', () => {
+    music.pause();
+  });
+</script>
 
   <!-- Slider / Carousel -->
   <section id="center" class="center_home">
@@ -133,7 +169,7 @@
     </button>
   </div>
 
-  <!-- Background audio -->
+  <!-- Background audio
   <audio id="bg-music" loop>
     <source src="song/Doosti.mp4" type="audio/mpeg">
     Your browser does not support the audio element.
@@ -148,7 +184,7 @@
   carousel.addEventListener('slide.bs.carousel', () => {
     music.play();
   });
-</script>
+</script> -->
 
 
   <!-- Quote Section -->
